@@ -1,69 +1,72 @@
-<!doctype html>
+<idoctype html>
 
 <html>
 <head>
-	<title>Tutorials Page</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
-	<link href="css/introHCI.css" rel="stylesheet">
+        <title>Workout Tutorials</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/bootstrap.min.css" rel="styplesheet">
+        <link href="css/boostrap-theme.min.css" rel="stylesheet">
+        <link href="css/tutorial.css" rel="stylesheet">
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
 </head>
 
 <body>
-
+	<div>
+	    <a href="index.html" class="home" style="text-decoration:none">
+	        <img src="images/home.png" alt="home" id="homebutton">
+	        <a href="questionary.html" class="questionary">
+	        	Get your personalized workout today!
+	        </a>
+	    </a>
+    
+	    <div>
+	    	<h1>Recently Viewed</h1>
+	    	<img src='images/chest2.png' class="viewed">
+	    	<img src='images/legs1.png' class="viewed">
+	    	<img src='images/back2.png' class="viewed">
+	    	<img src='images/back3.png' class="viewed">
+	    </div>
+	    <div>
+	    	<h1>Recommended</h1>
+	    	<img src='images/chest3.png' class="viewed">
+	    	<img src='images/legs3.png' class="viewed">
+	    	<img src='images/back1.png' class="viewed">
+	    	<img src='images/chest1.png' class="viewed">
+	    </div>
+		
+		<h1>Full List of Workout</h1>
 	<div class="container">
 
-	  <!-- Tutorials Page -->
-	  <h1>Tutorials</h1>
-
-    <!-- List of our sections -->
-
-    <div class="project" id="project1">
-      <a href="index.html" class="thumbnail">
-        <img src="" alt="" class="img">
-        <h3><p>Back to Main Page</p></h3>
-      </a>
+	    <div class="item1">
+	    	<button class="button" onclick="location.href='chest.html';" style="text-decoration:none" >
+                <span>ARMS</span>
+            </button>
+        </div>
+        <div class="item2">
+	    	<button class="button" onclick="location.href='chest.html';" style="text-decoration:none" >
+                <span>CHEST</span>
+            </button>
+        </div>
+        <div class="item3">
+	    	<button class="button" onclick="location.href='back.html';" style="text-decoration:none" >
+                 <span>BACK</span>
+            </button>
+        </div>
+        <div class="item4">
+	    	<button class="button" onclick="location.href='core.html';" style="text-decoration:none" >
+                 <span>CORE</span>
+            </button>
+        </div>
+        <div class="item5">
+	    	<button class="button" onclick="location.href='legs.html';" style="text-decoration:none" >
+                 <span>LEGS</span>
+            </button>
+        </div>
     </div>
 
-		<div class="project" id="project1">
-			<a href="" class="thumbnail">
-				<img src="images/lorempixel.people.1.jpeg" alt="Lorem Pixel image" class="img">
-				<p>Arms</p>
-			</a>
-		</div>
 
-		<div class="project" id="project1">
-			<a href="" class="thumbnail">
-				<img src="images/lorempixel.people.1.jpeg" alt="Lorem Pixel image" class="img">
-				<p>Chest</p>
-			</a>
-		</div>
-
-		<div class="project" id="project1">
-			<a href="" class="thumbnail">
-				<img src="images/lorempixel.people.1.jpeg" alt="Lorem Pixel image" class="img">
-				<p>Back</p>
-			</a>
-		</div>
-
-		<div class="project" id="project1">
-			<a href="" class="thumbnail">
-				<img src="images/lorempixel.people.1.jpeg" alt="Lorem Pixel image" class="img">
-				<p>Core</p>
-			</a>
-		</div>
-
-    <div class="project" id="project1">
-			<a href="" class="thumbnail">
-				<img src="images/lorempixel.people.1.jpeg" alt="Lorem Pixel image" class="img">
-				<p>Legs</p>
-			</a>
-		</div>
-
-  </div>
-
-	<script src="https://code.jquery.com/jquery.js"></script>
-	<script src="js/bootstrap.min.js"></script>
+    </div>
 </body>
-</html>
+<html>
