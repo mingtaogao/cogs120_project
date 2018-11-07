@@ -15,11 +15,6 @@ body {
   	margin: 10% auto;
 }
 
-.wrapper {
-		text-align: center;
-
-
-}
 .logo p {
 	margin: 10 10 10 10px;
 	font-size: 30px;
@@ -28,13 +23,25 @@ body {
 	color: #fcfcfc;
 }
 
-.button {
+.wrapper {
+		text-align: center;
+}
+.wrapper a {
+		text-decoration:none;
+}
+
+.container {
+		display:flex;
+		flex-flow: <‘column;’> || <‘wrap’>;
+}
+
+button {
     background-color: rgb(250,136,5,0.2);
     border-radius: 8px;
     color: white;
-		width:25%;
-		height: 50%;
-		padding: 10px 24px;
+		width:100%;
+		height: 25%;
+		padding: 10px 10px 10px 10px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -60,7 +67,10 @@ body {
 
 }
 
-.function p {
+.col a{
+	text-decoration:none;
+}
+.col p {
 		margin: 10 0 0 10px;
 		font-size: 20px;
 		font-weight: 500;

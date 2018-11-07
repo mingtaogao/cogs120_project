@@ -24,24 +24,32 @@ h1 {
 	color: white;
 }
 
-.viewed {
-    border: 1px solid #ccc;
+.container-workout {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: stretch;
+		height: 200px;
+}
+
+.container-workout img {
+    border: 3px solid #fcfcfc;
 		margin: 0 10 0 0;
 		width:300;
 		height:200;
 }
 
-.viewed:hover {
-    border: 1px solid #777;
+.container-workout img:hover {
+    border: 3px solid #F77614;
 }
 
-.container {
+.container-list {
   display: grid;
   grid-template-columns: auto auto;
   grid-gap: 10px;
   background-image: linear-gradient(to right, yellow, red);
 }
-.container > div {
+.container-list > div {
   background-color: rgba(250, 136, 5, 0.2);
   text-align: center;
   padding: 50px 0;
@@ -140,4 +148,18 @@ h1 {
 		font-size:50px;
 		cursor:pointer;
 		color:#F77614;
+}
+
+#video {
+  width: 300px;
+  height: 200px;
+  background-color: #ccc;
+  background-image: url('../images/legs4.jpg');
+  background-size: cover;
+  border: 2px solid #fcfcfc;
+}
+
+#video.active {
+  background-color: white;
+  border: 2px solid #eee;
 }

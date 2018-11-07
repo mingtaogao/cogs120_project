@@ -27,30 +27,27 @@
     <a href="account.html" class="mainFunctions">My Account</a>
   </div>
   <span class='openbtn' onclick="openNav()">&#8801;</span>
-  <div>
-	    <!--<a href="index.html" class="home" style="text-decoration:none">
-	        <img src="images/home.png" alt="home" id="homebutton">-->
-	        <a href="questionary.html" class="questionary">
-	        	Get your personalized workout today!
-	        </a>
-
-	    <div class="container-fluid">
+  <a href="questionary.html" class="questionary">
+    Get your personalized workout today!
+  </a>
+  <div class="container-workout">
+	    <div>
 	    	<h1>Recently Viewed</h1>
-	    	<img src='images/chest2.png' class="viewed">
-	    	<img src='images/legs1.png' class="viewed">
-	    	<img src='images/back2.png' class="viewed">
-	    	<img src='images/back3.png' class="viewed">
+        <img id="video" src='images/legs4.jgp'>
+	    	<img src='images/legs1.png'>
+	    	<img src='images/back2.png'>
+	    	<img src='images/back3.png'>
 	    </div>
-	    <div class="container-fluid">
+	    <div>
 	    	<h1>Recommended</h1>
-	    	<img src='images/chest3.png' class="viewed">
-	    	<img src='images/legs3.png' class="viewed">
-	    	<img src='images/back1.png' class="viewed">
-	    	<img src='images/chest1.png' class="viewed">
+	    	<img src='images/chest3.png'>
+	    	<img src='images/legs3.png'>
+	    	<img src='images/back1.png'>
+	    	<img src='images/chest1.png'>
 	    </div>
 
 		<h1>Full List of Workout</h1>
-	<div class="container">
+	<div class="container-list">
 
 	    <div class="item1">
 	    	<button class="button" onclick="location.href='chest.html';" style="text-decoration:none" >
@@ -91,12 +88,15 @@
     </script>
     <script>
       function openNav() {
-        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("mySidenav").style.width = "25%";
       }
 
       function closeNav() {
         document.getElementById("mySidenav").style.width = "0";
       }
     </script>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/tutorials.js"></script>
 </body>
 <html>
