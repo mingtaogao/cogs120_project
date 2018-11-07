@@ -10,11 +10,6 @@ body {
   	z-index: 12;
 }
 
-#homebutton {
-	margin-left: 10;
-	margin-top: 10;
-}
-
 h1 {
 	font-size: 25px;
 	font-weight: 400;
@@ -95,4 +90,54 @@ h1 {
 .button:hover span:after {
   opacity: 1;
   right: 0;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color:#F77614;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav .mainFunctions{
+    padding: 15px 8px 8px 25px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #fcfcfc;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav .workoutParts{
+		padding: 8px 8px 8px 75px;
+		text-decoration: none;
+		font-size: 20px;
+		color: #fcfcfc;
+		display: block;
+		transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #F7AB14;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+		color: #fcfcfc;
+}
+
+.openbtn {
+		font-size:50px;
+		cursor:pointer;
+		color:#F77614;
 }
