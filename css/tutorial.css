@@ -7,99 +7,21 @@ body {
   	align-items: center;
   	justify-content: center;
   	background-image: linear-gradient(to right, yellow, red);
-  	z-index: 12;
 }
 
 h1 {
-	font-size: 25px;
+	font-size: 15px;
 	font-weight: 400;
 	text-transform: uppercase;
 	color: #fcfcfc;
 }
 
 .questionary {
-	margin-left:22%;
-	font-size: 35px;
+	margin-left:10%;
+	font-size: 15px;
 	font-weight: 400;
 	color: white;
 }
-
-.container-workout {
-		display: flex;
-		flex-direction: column;
-		justify-content: flex-start;
-		align-items: stretch;
-		height: 200px;
-}
-
-.container-workout img {
-    border: 3px solid #fcfcfc;
-		margin: 0 10 0 0;
-		width:300;
-		height:200;
-}
-
-.container-workout img:hover {
-    border: 3px solid #F77614;
-}
-
-.container-list {
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-gap: 10px;
-  background-image: linear-gradient(to right, yellow, red);
-}
-.container-list > div {
-  background-color: rgba(250, 136, 5, 0.2);
-  text-align: center;
-  padding: 50px 0;
-}
-
-.item5{
-	grid-column-start: 1;
-	grid-column-end: 3;
-}
-
-.button {
-  display: inline-block;
-  border-radius: 4px;
-  background-color:rgb(0,0,0,0);
-  border: none;
-  color: #FFFFFF;
-  text-align: center;
-  font-size: 28px;
-  padding: 20px;
-  width: 200px;
-  transition: all 0.5s;
-  cursor: pointer;
-  margin: 5px;
-}
-
-.button span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-}
-
-.button span:after {
-  content: '\00bb';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
-}
-
-.button:hover span {
-  padding-right: 25px;
-}
-
-.button:hover span:after {
-  opacity: 1;
-  right: 0;
-}
-
 .sidenav {
     height: 100%;
     width: 0;
@@ -114,18 +36,18 @@ h1 {
 }
 
 .sidenav .mainFunctions{
-    padding: 15px 8px 8px 25px;
+    padding: 12px 8px 8px 20px;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 15px;
     color: #fcfcfc;
     display: block;
     transition: 0.3s;
 }
 
 .sidenav .workoutParts{
-		padding: 8px 8px 8px 75px;
+		padding: 8px 5px 5px 30px;
 		text-decoration: none;
-		font-size: 20px;
+		font-size: 12px;
 		color: #fcfcfc;
 		display: block;
 		transition: 0.3s;
@@ -145,10 +67,95 @@ h1 {
 }
 
 .openbtn {
-		font-size:50px;
+		font-size:30px;
 		cursor:pointer;
 		color:#F77614;
 }
+
+.workout {
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: flex-start;
+		margin-left:5px;
+		height: 90px;
+}
+
+.workout .row {
+	height:100%;
+}
+
+.workout img {
+    border:2px solid #fcfcfc;
+		margin-left: 5px;
+		width:30%;
+		height:90px;
+}
+
+.workout img:hover {
+    border: 3px solid #F77614;
+}
+
+.grid-container {
+	display: grid;
+	grid-template-columns: auto auto;
+	margin-top: 20%;
+  grid-gap: 5px;
+  background-image: linear-gradient(to right, yellow, red);
+}
+
+.grid-container > div {
+  background-color: rgba(250, 136, 5, 0.2);
+	margin-left: 5px;
+	margin-right: 5px;
+  padding: 20px 0;
+}
+
+.item5{
+	grid-column-start: 1;
+	grid-column-end: 3;
+}
+
+ button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color:rgb(0,0,0,0);
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 15px;
+  padding: 3px;
+  width: 100%;
+	text-decoration:none;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+button:hover span {
+  padding-right: 25px;
+}
+
+button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
 
 #video {
   width: 300px;
