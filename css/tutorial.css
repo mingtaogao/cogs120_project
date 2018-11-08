@@ -76,7 +76,7 @@ h1 {
 		flex-direction: row;
 		flex-wrap: nowrap;
 		justify-content: flex-start;
-		margin-left:5px;
+		margin-left:10px;
 		height: 90px;
 }
 
@@ -84,16 +84,7 @@ h1 {
 	height:100%;
 }
 
-.workout img {
-    border:2px solid #fcfcfc;
-		margin-left: 5px;
-		width:30%;
-		height:90px;
-}
 
-.workout img:hover {
-    border: 3px solid #F77614;
-}
 
 .grid-container {
 	display: grid;
@@ -157,16 +148,46 @@ button:hover span:after {
 }
 
 
-#video {
-  width: 300px;
-  height: 200px;
-  background-color: #ccc;
+.legExt {
+  display: block;
+  width: 120px;
+	margin-left: 5px;
+  height: 90px;
   background-image: url('../images/legs4.jpg');
   background-size: cover;
   border: 2px solid #fcfcfc;
 }
 
-#video.active {
+.legExt.active {
   background-color: white;
-  border: 2px solid #eee;
+  border: 2px solid #F77614;
+}
+
+.calfExt {
+  display: block;
+  width: 120px;
+	margin-left: 5px;
+  height: 90px;
+  background-image: url('../images/calfext.jpg');
+  background-size: cover;
+  border: 2px solid #fcfcfc;
+}
+
+.calfExt.active {
+  background-color: white;
+  border: 2px solid #F77614;
+}
+.tricepPress {
+  display: block;
+  width: 120px;
+  height: 90px;
+	margin-left: 5px;
+  background-image: url('../images/tricepPress.jpg');
+  background-size: cover;
+  border: 2px solid #fcfcfc;
+}
+
+.tricepPresss.active {
+  background-color: white;
+  border: 2px solid #F77614;
 }

@@ -29,30 +29,28 @@
 
     <a href="questionary.html" class="questionary"> Get your personalized workout today!</a>
 
-    <div class="container workout">
+    <div class="container-fluid workout">
       <h1>Recently Viewed</h1>
       <div class="row">
         <div id="myCarousel1" class="carousel slide" data-ride="carousel" data-interval="false">
           <div class="carousel-inner">
             <div class="item active">
               <div class="row">
-                  <img src="images/legs1.png">
-                  <img src="images/chest1.png">
-                  <img src="images/back1.png">
+                  <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 legExt"></div>
+                  <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 calfExt"></div>
+                  <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 tricepPress"></div>
               </div>
             </div>
             <div class="item">
               <div class="row">
-                <img src="images/legs2.png">
-                <img src="images/chest2.png">
-                <img src="images/back2.png">
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 legExt"></div>
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 calfExt"></div>
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 calfExt"></div>
               </div>
             </div>
             <div class="item">
-              <div class="row">
-                <img src="images/legs3.png">
-                <img src="images/chest3.png">
-              </div>
+              <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 legExt"></div>
+              <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 calfExt"></div>
             </div>
           </div>
           <!-- Controls -->
@@ -151,6 +149,12 @@
         document.getElementById("mySidenav").style.width = "0";
       }
     </script>
+    <!-- <script>
+        $('#video').on('click', function() {
+            $(this).html('<iframe width="560" height="315" src="https://www.youtube.com/embed/8Jqof7z3QYM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>')
+            .addClass('active');
+          });
+    </script> -->
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/tutorials.js"></script>
