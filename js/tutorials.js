@@ -1,5 +1,5 @@
 function openNav() {
-  document.getElementById("mySidenav").style.width = "25%";
+  document.getElementById("mySidenav").style.width = "28%";
 }
 
 function closeNav() {
@@ -28,5 +28,9 @@ $('.shoulderPress').on('click', function() {
 });
 $('.backExt').on('click', function() {
   $(this).html('<iframe width="180" height="130" src="https://www.youtube.com/embed/YrBgyPSajvU" frameborder="0" allowfullscreen="true"></iframe>')
+  .addClass('active');
+});
+$('.cableTwist').on('click', function() {
+  $(this).html('<iframe width="180" height="130" src="https://www.youtube.com/embed/zQJKfN7BU-c" frameborder="0" allowfullscreen="true"></iframe>')
   .addClass('active');
 });

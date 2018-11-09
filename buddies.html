@@ -2,10 +2,133 @@
 
 <html>
 <head>
-	<title>Workout Buddies</title>
+  <title>Workout Buddies Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="css/buddies.css" rel="stylesheet">
 </head>
 <body>
-	<p>You can find out your workout buddies here!</p>
-	 <a href='index.html'>back</a>
+  <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="index.html" class="mainFunctions">Home</a>
+      <a href="tutorials.html" class="mainFunctions">Workout Tutorials</a>
+        <a href="arms.html" class="workoutParts">Arms</a>
+        <a href="chest.html" class="workoutParts">Chest</a>
+        <a href="back.html" class="workoutParts">Back</a>
+        <a href="core.html" class="workoutParts">Core</a>
+        <a href="legs.html" class="workoutParts">Legs</a>
+      <a href="buddies.html" class="mainFunctions">Workout Buddies</a>
+      <a href="motivation.html" class="mainFunctions">Motivations</a>
+      <a href="account.html" class="mainFunctions">My Account</a>
+    </div>
+  <span class='openbtn' onclick="openNav()">&#8801;</span>
+
+	<button id="location" onclick="getLocation(); showPeople();">Get Your Current Location</button>
+	<p id="nearby">People Nearby</p>
+	<div class="container">
+	  <img src="images/avatar1.jpg">
+	  <p>Ming: 9:30 - 10:30</p>
+		<button class="chatbutton" onclick="openForm1()">Chat</button>
+		<div class="chat-popup" id="myForm1">
+		  <form class="form-container">
+		    <h1>Chat with Ming </h1>
+		    <h2>Message</h2>
+		    <textarea placeholder="Message Ming..."  required></textarea>
+				<div class="container">
+					<div class="row">
+						<button type="button" class="col-xs-6 col-sm-6 col-md-6 col-lg-6 btn cancel" onclick="closeForm1()">Close</button>
+				    <button type="submit" class="col-xs-6 col-sm-6 col-md-6 col-lg-6 btn" onclick="openForm1()">Send</button>
+					</div>
+				</div>
+		  </form>
+		</div>
+	</div>
+
+	<div class="container darker">
+	  <img src="images/avatar2.jpeg">
+	  <p>James: 9:50 - 11:00</p>
+		<button class="chatbutton" onclick="openForm2()">Chat</button>
+		<div class="chat-popup" id="myForm2">
+		  <form class="form-container">
+		    <h1>Chat with James</h1>
+		    <h2>Message</h2>
+		    <textarea placeholder="Message James..."  required></textarea>
+				<div class="container">
+					<div class="row">
+						<button type="button" class="col-xs-6 col-sm-6 col-md-6 col-lg-6 btn cancel" onclick="closeForm2()">Close</button>
+				    <button type="submit" class="col-xs-6 col-sm-6 col-md-6 col-lg-6 btn" onclick="openForm2()">Send</button>
+					</div>
+				</div>
+		  </form>
+			</div>
+	</div>
+
+	<div class="container">
+	  <img src="images/avatar3.jpg">
+	  <p>Lucia: 10:00 - 11:45</p>
+		<button class="chatbutton" onclick="openForm3()">Chat</button>
+		<div class="chat-popup" id="myForm3">
+		  <form class="form-container">
+		    <h1>Chat with Lucia</h1>
+		    <h2>Message</h2>
+		    <textarea placeholder="Message Lucia..."  required></textarea>
+				<div class="container">
+					<div class="row">
+						<button type="button" class="col-xs-6 col-sm-6 col-md-6 col-lg-6 btn cancel" onclick="closeForm3()">Close</button>
+				    <button type="submit" class="col-xs-6 col-sm-6 col-md-6 col-lg-6 btn" onclick="openForm3()">Send</button>
+					</div>
+				</div>
+		  </form>
+		</div>
+	</div>
+
+	<div class="container darker">
+	  <img src="images/avatar4.jpg">
+	  <p>Sofia: 10:05 - 11:30</p>
+		<button class="chatbutton" onclick="openForm4()">Chat</button>
+		<div class="chat-popup" id="myForm4">
+		  <form class="form-container">
+		    <h1>Chat with Sofia</h1>
+		    <h2>Message</h2>
+		    <textarea placeholder="Message Sofia..."  required></textarea>
+				<div class="container">
+					<div class="row">
+						<button type="button" class="col-xs-6 col-sm-6 col-md-6 col-lg-6 btn cancel" onclick="closeForm4()">Close</button>
+				    <button type="submit" class="col-xs-6 col-sm-6 col-md-6 col-lg-6 btn" onclick="openForm4()">Send</button>
+					</div>
+				</div>
+		  </form>
+		</div>
+	</div>
+
+	<div class="container">
+		<img src="images/avatar5.jpeg">
+		<p>Steven: 10:15 - 12:00</p>
+		<button class="chatbutton" onclick="openForm5()">Chat</button>
+		<div class="chat-popup" id="myForm5">
+		  <form class="form-container">
+		    <h1>Chat with Steven</h1>
+		    <h2>Message</h2>
+		    <textarea placeholder="Message Steven..."  required></textarea>
+				<div class="container">
+					<div class="row">
+						<button type="button" class="col-xs-6 col-sm-6 col-md-6 col-lg-6 btn cancel" onclick="closeForm5()">Close</button>
+				    <button type="submit" class="col-xs-6 col-sm-6 col-md-6 col-lg-6 btn" onclick="openForm5()">Send</button>
+					</div>
+				</div>
+		  </form>
+		</div>
+	</div>
+
+
+  <!--Scripts-->
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/tutorials.js"></script>
+	<script src="js/buddies.js"></script>
+</body>
 </body>
 </html>

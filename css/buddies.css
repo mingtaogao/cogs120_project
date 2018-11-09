@@ -1,0 +1,188 @@
+body {
+		top: 0;
+  	left: 0;
+  	width: 100%;
+  	height: 100%;
+  	flex-direction: column;
+  	align-items: center;
+  	justify-content: center;
+  	background-image: linear-gradient(to right, yellow, red);
+  	z-index: 12;
+}
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color:#F77614;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav .mainFunctions{
+    padding: 12px 8px 8px 20px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #fcfcfc;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav .workoutParts{
+		padding: 8px 5px 5px 30px;
+		text-decoration: none;
+		font-size: 12px;
+		color: #fcfcfc;
+		display: block;
+		transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #F7AB14;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+		color: #fcfcfc;
+}
+
+.openbtn {
+		font-size:30px;
+		cursor:pointer;
+		color:#F77614;
+}
+
+#location {
+ display: inline-block;
+ border-radius: 4px;
+ background-color:rgb(0,0,0,0);
+ border: none;
+ color: #FFFFFF;
+ text-align: center;
+ font-size: 15px;
+ padding: 3px;
+ width: 100%;
+ text-decoration:underline;
+ cursor: pointer;
+ margin: 5px;
+}
+
+#nearby{
+  color: #fcfcfc;
+  font-size: 15px;
+  text-shadow: 1px 1px #F77614;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.container {
+    border: 1px solid #F77614;
+    background-color: rgba(250, 136, 5, 0.2);
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    visibility: hidden;
+}
+.darker {
+    border-color: #fcfcfc;
+    background-color: rgb(255, 102, 0, 0.7) ;
+}
+
+.container.active{
+  visibility: visible;
+}
+
+.container p {
+  color: #fcfcfc;
+  font-size: 17px;
+  word-spacing: 30px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.container img {
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    float: left;
+    max-width: 60px;
+    margin-right: 20px;
+}
+
+.time {
+    float: right;
+    color: #fcfcfc;
+    font-size: 15px;
+}
+
+.chatbutton {
+  background-color: #F77614;
+  color: white;
+  margin-left: 75%;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  border-radius:20%;
+}
+
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 5px;
+  right: 15px;
+  border: 2px solid #fcfcfc;
+}
+
+.form-container {
+  max-width: 300px;
+  max-height: 450px;
+  padding: 10px;
+  background-color: #F77614;
+}
+
+.form-container h1{
+  font-size: 25px;
+  color: white;
+}
+
+.form-container h2{
+  font-size: 15px;
+  color: white;
+}
+
+.form-container textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  min-height: 200px;
+}
+
+.form-container .btn {
+  background-color: green;
+  text-align: center;
+  color: white;
+  padding: 20px 50px;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+.form-container .cancel {
+  background-color: red;
+}
+
+.form-container .btn:hover {
+  opacity: 1;
+}

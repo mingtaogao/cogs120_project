@@ -1,0 +1,12 @@
+.quotes{
+   flex-direction: row;
+   flex-wrap: nowrap;
+   justify-content: flex-start;
+   height: 30%;
+   padding:10% 10% 10% 10%;
+}
+
+.music {
+  padding-top: 70%;
+  padding-left: 10%;
+}
