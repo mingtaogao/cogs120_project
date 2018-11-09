@@ -43,19 +43,9 @@ button {
     cursor: pointer;
 }
 
-.button1:hover {
-    background-color: url('../images/gymimage.jpg');
-    color: white;
-}
-.button2:hover{
-		background-image: url('../images/gymimage');
-		color: white;
-}
-.button3:hover{
-
-}
-.button4:hover{
-
+.container img {
+	width:70px;
+	height: 50px;
 }
 
 .col a{
