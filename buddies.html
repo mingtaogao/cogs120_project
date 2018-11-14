@@ -27,8 +27,53 @@
   <span class='openbtn' onclick="openNav()">&#8801;</span>
 
 	<button id="location" onclick="getLocation(); showPeople();">Get Your Current Location</button>
-	<p id="nearby">People Nearby</p>
-	<div class="container">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+	        <p id="nearby">People Nearby</p>
+      </div>
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+        <button id="post" type="button" onclick="makePost()">Make Your Post</button>
+      </div>
+    </div>
+  </div>
+
+  <form id="postForm" onsubmit="makePost()">
+    <b>Name:</b> <input type="text" name="name" id="name">
+    <br><br>
+    <b> Time Available:</b>
+    <br>
+    <b>From: </b><input type="time" name="startTime" id="startTime">
+    <b>To: </b><input type="time" name="endTime" id="endTime">
+    <br><br>
+    <button type="button" id="submit">Submit</button>
+  </form>
+
+  <script id="entry-template" type="text/x-handlebars-template">
+      <div class="container">
+    	  <img src="{{profilePic}}">
+    	  <p>{{name}}: {{startTime}} - {{endTime}}</p>
+    		<button id="chat" class="chatbutton" onclick="openForm{{index}}()">Chat</button>
+
+        <div class="chat-popup" id="myForm{{index}}">
+    		  <form class="form-container">
+    		    <h1>Chat with {{name}} </h1>
+    		    <h2>Message</h2>
+    		    <textarea placeholder="Message {{name}}..."  required></textarea>
+    				<div class="container-fluid">
+    					<div class="row">
+    						<button type="button" class="col-xs-6 col-sm-6 col-md-6 col-lg-6 btn cancel" onclick="openForm{{index}}()">Close</button>
+    				    <button type="submit" class="col-xs-6 col-sm-6 col-md-6 col-lg-6 btn" onclick="closeForm{{index}}()">Send</button>
+    					</div>
+    				</div>
+    		  </form>
+    		</div>
+
+    	</div>
+  </script>
+  <div id="templatedPosts"></div>
+
+  <div class="container">
 	  <img src="images/avatar1.jpg">
 	  <p>Ming: 9:30 - 10:30</p>
 		<button class="chatbutton" onclick="openForm1()">Chat</button>
@@ -47,7 +92,7 @@
 		</div>
 	</div>
 
-	<div class="container darker">
+	<!-- <div class="container darker">
 	  <img src="images/avatar2.jpeg">
 	  <p>James: 9:50 - 11:00</p>
 		<button class="chatbutton" onclick="openForm2()">Chat</button>
@@ -121,14 +166,15 @@
 				</div>
 		  </form>
 		</div>
-	</div>
+	</div> -->
 
 
   <!--Scripts-->
   <script src="https://code.jquery.com/jquery.js"></script>
   <script src="js/bootstrap.min.js"></script>
+  <script src="js/handlebars-v4.0.11.js"></script>
   <script src="js/tutorials.js"></script>
 	<script src="js/buddies.js"></script>
-</body>
+
 </body>
 </html>

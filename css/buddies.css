@@ -82,6 +82,47 @@ body {
   margin-left: 10px;
 }
 
+#post {
+	margin-top: 10px;
+	margin-right: 10px;
+	font-size: 15px;
+	color: #fcfcfc;
+	text-shadow: 1px 1px #F77614;
+	border-color: #fcfcfc;
+	border-radius: 20%;
+	background-color: #F77614;
+}
+#post:hover {
+	background-color: #Fabc11;
+	text-decoration: none;
+}
+
+form{
+  padding:10px;
+  border:2px solid #fcfcfc;
+  background:#F5A742;
+  border-radius:15px;
+  display:none;
+
+}
+b{
+  color:#fcfcfc;
+}
+
+#submit{
+  border-radius: 20%;
+  color: #fcfcfc;
+  font-size: 15px;
+  background: #F77614;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+#submit:hover{
+  background:#F5A742;
+  text-decoration: none;
+}
+
 .container {
     border: 1px solid #F77614;
     background-color: rgba(250, 136, 5, 0.2);

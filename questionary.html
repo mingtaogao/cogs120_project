@@ -1,14 +1,62 @@
-<idoctype html>
+<doctype html>
+  <html>
+  <head>
+    <title>Questionarie</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link href="css/questionary.css" rel="stylesheet">
+  </head>
 
-<html>
-<head>
-        <title>Questionary</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="css/tutorial.css" rel="stylesheet">
-</head>
 <body>
-        <p>A list of questions will be provided</p>
-	<a href='tutorials.html'><p>submit</p></a>
+  <button id="back" class="button" onclick="location.href='tutorials.html'">Back</button>
+  <form class="myForm" onsubmit="showRecom()">
+        <p>
+        <label>Your Height:
+        <br>Feet: <input type="text" name="inch">
+        <br>Inches: <input type="text" name="feet">
+        </label>
+        </p>
+
+        <br><p>
+        <label>Your Weight (in pounds):
+        <input type="text" name="weight">
+        </label>
+        </p>
+
+        <br><br><fieldset>
+        <legend>Gender:</legend>
+        <input type="radio" name="gender" value="male" checked> Male<br>
+        <input type="radio" name="gender" value="female"> Female<br>
+        </fieldset>
+
+        <br><br><fieldset>
+        <legend>How often do you go to gym weekly? </legend>
+        <input type="radio" name="freq" value="freq1" checked>Once or Twice<br>
+        <input type="radio" name="freq" value="freq2">At least Three Times<br>
+        <input type="radio" name="freq" value="freq3">Once per day<br>
+        <input type="radio" name="freq" value="freq4">More than once per day<br>
+        </fieldset>
+
+        <br><br><fieldset>
+        <legend>How long do you usually stay in the gym? </legend>
+        <input type="radio" name="dura" value="dura1" checked>Less than 30 minutes<br>
+        <input type="radio" name="dura" value="dura2">30 minutes to 1 hour<br>
+        <input type="radio" name="dura" value="dura3">1 hour to 2 hours<br>
+        <input type="radio" name="dura" value="dura4">More than 2 hours<br>
+        </fieldset>
+
+        <br><br><fieldset>
+        <legend>What types of workout do you focus on?</legend>
+        <input type="checkbox" name="workout" value="cadio">Cadio<br>
+        <input type="checkbox" name="workout" value="strength">Strength Training<br>
+        <input type="checkbox" name="workout" value="flex">Flexibility Training<br>
+        <input type="checkbox" name="workout" value="outdoor">Outdoor Activities<br>
+        </fieldset>
+
+        <button class="button">Submit</button>
+
+</form>
+  <script src="https://code.jquery.com/jquery.js"></script>
 </body>
 </html>
