@@ -10,17 +10,17 @@
 
 <body>
   <button id="back" class="button" onclick="location.href='tutorials.html'">Back</button>
-  <form class="myForm" onsubmit="showRecom()">
+  <form class="myForm" action="tutorials.html">
         <p>
         <label>Your Height:
-        <br>Feet: <input type="text" name="inch">
-        <br>Inches: <input type="text" name="feet">
+        <br>Feet: <input type="text" name="inch" required>
+        <br>Inches: <input type="text" name="feet" required>
         </label>
         </p>
 
         <br><p>
         <label>Your Weight (in pounds):
-        <input type="text" name="weight">
+        <input type="text" name="weight" required>
         </label>
         </p>
 
@@ -54,9 +54,14 @@
         <input type="checkbox" name="workout" value="outdoor">Outdoor Activities<br>
         </fieldset>
 
-        <button class="button">Submit</button>
+        <button class="submit" id="submit">Submit</button>
 
 </form>
   <script src="https://code.jquery.com/jquery.js"></script>
+  <script type="text/javascript">
+    $('#submit').on('click', function() {
+        localStorage.setItem("submitted", false);
+    });
+  </script>
 </body>
 </html>

@@ -26,9 +26,7 @@
       <a href="account.html" class="mainFunctions">My Account</a>
     </div>
     <span class='openbtn' onclick="openNav()">&#8801;</span>
-
-    <a href="questionary.html" class="questionary"> Get your personalized workout today!</a>
-
+    
     <div class="container-fluid workout">
       <h1>Recently Viewed</h1>
       <div class="row">
@@ -78,9 +76,16 @@
       </div>
     </div>
 
-    <div class="container workout" style="margin-top:10%">
-      <h1>Recommended</h1>
-      <div class="row">
+    <div class="container workout" style="margin-top:15%">
+      <h1 style="margin-bottom: 0px;">Recommend For You</h1>
+      <div id="questionary">
+        <img src="images/workout.jpg"">
+        <button id="btn" onclick="location.href='questionary.html';">Get your personalized workout today!</button>
+      </div>
+
+      <div id="recommend"> 
+        <a href="questionary.html">Submit Again</a>
+        <div class="row">
         <div id="myCarousel2" class="carousel slide" data-ride="carousel" data-interval="false">
           <div class="carousel-inner">
             <div class="item active">
@@ -126,9 +131,11 @@
            <span class="sr-only">Next</span>
           </a>
         </div>
+        </div>
       </div>
     </div>
 
+    <h1 style="margin-top: 17%; margin-left:7%">All Workouts Tutorials</h1>
     <div class="grid-container">
   	   <div class="item1">
   	    	<button onclick="location.href='arms.html';">

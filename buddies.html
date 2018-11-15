@@ -39,41 +39,41 @@
   </div>
 
   <form id="postForm" onsubmit="makePost()">
-    <b>Name:</b> <input type="text" name="name" id="name">
+    <b>Name:</b> <input type="text" name="name" id="name" required>
     <br><br>
     <b> Time Available:</b>
     <br>
-    <b>From: </b><input type="time" name="startTime" id="startTime">
-    <b>To: </b><input type="time" name="endTime" id="endTime">
+    <b>From: </b><input type="time" name="startTime" id="startTime" required>
+    <b>To: </b><input type="time" name="endTime" id="endTime" required>
     <br><br>
     <button type="button" id="submit">Submit</button>
   </form>
 
   <script id="entry-template" type="text/x-handlebars-template">
-      <div class="container">
+      <div class="container container{{index}}">
     	  <img src="{{profilePic}}">
     	  <p>{{name}}: {{startTime}} - {{endTime}}</p>
-    		<button id="chat" class="chatbutton" onclick="openForm{{index}}()">Chat</button>
+    		<button id="chat" class="chatbutton" onclick="openForm({{index}})">Chat</button>
 
         <div class="chat-popup" id="myForm{{index}}">
     		  <form class="form-container">
     		    <h1>Chat with {{name}} </h1>
     		    <h2>Message</h2>
-    		    <textarea placeholder="Message {{name}}..."  required></textarea>
+    		    <textarea placeholder="Message {{name}}..." required></textarea>
     				<div class="container-fluid">
     					<div class="row">
-    						<button type="button" class="col-xs-6 col-sm-6 col-md-6 col-lg-6 btn cancel" onclick="openForm{{index}}()">Close</button>
-    				    <button type="submit" class="col-xs-6 col-sm-6 col-md-6 col-lg-6 btn" onclick="closeForm{{index}}()">Send</button>
+    						<button type="button" class="col-xs-6 col-sm-6 col-md-6 col-lg-6 btn cancel" onclick="closeForm({{index}})">Close</button>
+    				    	<button type="button" class="col-xs-6 col-sm-6 col-md-6 col-lg-6 btn send" onclick="closeForm({{index}})">Send</button>
     					</div>
     				</div>
     		  </form>
-    		</div>
-
     	</div>
+
+    </div>
   </script>
   <div id="templatedPosts"></div>
 
-  <div class="container">
+<!--   <div class="container">
 	  <img src="images/avatar1.jpg">
 	  <p>Ming: 9:30 - 10:30</p>
 		<button class="chatbutton" onclick="openForm1()">Chat</button>
@@ -92,7 +92,7 @@
 		</div>
 	</div>
 
-	<!-- <div class="container darker">
+	<div class="container darker">
 	  <img src="images/avatar2.jpeg">
 	  <p>James: 9:50 - 11:00</p>
 		<button class="chatbutton" onclick="openForm2()">Chat</button>

@@ -8,11 +8,10 @@ var postContent = [
   {'profilePic': 'images/avatar5.jpeg', 'name': 'Steven', 'startTime':'10:15', 'endTime':'12:00', 'index':5},
 ]
 
+var allowPost = 1;
+
 $(document).ready(function() {
   console.log('hello world');
-
-  //Disable the make post button
-  document.getElementById("post").disabled = true;
 
   // compile the template
   var source   = $("#entry-template").html();
@@ -25,10 +24,7 @@ $(document).ready(function() {
     var curHtml = template(curData);
     parentDiv.append(curHtml);
   }
-
-  $("#post").click(function(){
-      $("#postForm").toggle();
-  });
+  
 
   $("#submit").click(function(){
     localStorage.setItem("name", document.getElementById('name').value);
@@ -37,10 +33,19 @@ $(document).ready(function() {
     var name = localStorage.getItem("name");
     var startTime = localStorage.getItem("startTime");
     var endTime = localStorage.getItem("endTime");
-    postContent.unshift({'profilePic': 'images/avatar6.png', 'name': name, 'startTime': startTime, 'endTime': endTime});
+    postContent.unshift({'profilePic': 'images/avatar6.png', 'name': name, 'startTime': startTime, 'endTime': endTime, 'index': postContent.length + 1});
     var html = template(postContent[0]);
     parentDiv.prepend(html);
+    document.getElementById('chat').setAttribute('onclick', 'deletePost(postContent.length)');
+    document.getElementById('chat').innerText="Delete"
     $(".container").addClass("active");
+    $("#postForm").hide();
+    allowPost = 2;
+  });
+
+
+  $(".send").click(function(){
+    window.alert("Your Message Has Been Sent!");
   });
 });
 
@@ -54,8 +59,18 @@ function getLocation() {
 
 function showPeople(){
   $(".container").addClass("active");
-  document.getElementById("post").disabled = false;
+  allowPost = 0;
 }
+
+$('#post').click(function() {
+  if (allowPost == 1) {
+    window.alert("Get your current location then make your post!");
+  } else if (allowPost == 2){
+    window.alert("You have already made a post!");
+  } else {
+     $("#postForm").toggle();
+  }
+ });
 
 function showPosition(position) {
     x.innerHTML = "You are at: UCSD RIMAC Gym.";
@@ -67,46 +82,17 @@ function makePost(){
     localStorage.setItem("endTime", document.getElementById('endTime').value);
 }
 
-
-function openForm() {
-    document.getElementById("myForm").style.display = "block";
-}
-function closeForm() {
-    document.getElementById("myForm").style.display = "none";
+function openForm(num) {
+    $("#myForm" + num).show();
 }
 
-function openForm1() {
-    document.getElementById("myForm1").style.display = "block";
+function closeForm(num) {
+    $("#myForm" + num).hide();
 }
 
-function closeForm1() {
-    document.getElementById("myForm1").style.display = "none";
-}
-function openForm2() {
-    document.getElementById("myForm2").style.display = "block";
-}
-
-function closeForm2() {
-    document.getElementById("myForm2").style.display = "none";
-}
-function openForm3() {
-    document.getElementById("myForm3").style.display = "block";
+function deletePost(num) {
+  postContent.splice(num - 6, 1);
+  $(".container" + num).remove();
+  allowPost = 0;
 }
 
-function closeForm3() {
-    document.getElementById("myForm3").style.display = "none";
-}
-function openForm4() {
-    document.getElementById("myForm4").style.display = "block";
-}
-
-function closeForm4() {
-    document.getElementById("myForm4").style.display = "none";
-}
-function openForm5() {
-    document.getElementById("myForm5").style.display = "block";
-}
-
-function closeForm5() {
-    document.getElementById("myForm5").style.display = "none";
-}

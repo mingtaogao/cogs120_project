@@ -54,7 +54,7 @@ body {
 }
 
 .openbtn {
-		font-size:30px;
+		font-size:40px;
 		cursor:pointer;
 		color:#F77614;
 }
@@ -97,7 +97,7 @@ body {
 	text-decoration: none;
 }
 
-form{
+#postForm{
   padding:10px;
   border:2px solid #fcfcfc;
   background:#F5A742;
@@ -105,6 +105,7 @@ form{
   display:none;
 
 }
+
 b{
   color:#fcfcfc;
 }
@@ -177,14 +178,14 @@ b{
 .chat-popup {
   display: none;
   position: fixed;
+  height: 450px;
   bottom: 5px;
   right: 15px;
   border: 2px solid #fcfcfc;
 }
 
 .form-container {
-  max-width: 300px;
-  max-height: 450px;
+  height: 100%;
   padding: 10px;
   background-color: #F77614;
 }
@@ -227,3 +228,4 @@ b{
 .form-container .btn:hover {
   opacity: 1;
 }
+

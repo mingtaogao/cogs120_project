@@ -10,21 +10,7 @@
 
 </head>
 <body>
-  <div id="mySidenav" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <a href="index.html" class="mainFunctions">Home</a>
-    <a href="tutorials.html" class="mainFunctions">Workout Tutorials</a>
-      <a href="arms.html" class="workoutParts">Arms</a>
-      <a href="chest.html" class="workoutParts">Chest</a>
-      <a href="back.html" class="workoutParts">Back</a>
-      <a href="core.html" class="workoutParts">Core</a>
-      <a href="legs.html" class="workoutParts">Legs</a>
-    <a href="buddies.html" class="mainFunctions">Workout Buddies</a>
-    <a href="motivation.html" class="mainFunctions">Motivations</a>
-    <a href="account.html" class="mainFunctions">My Account</a>
-  </div>
-  <span class='openbtn' onclick="openNav()">&#8801;</span>
-
+  <button id="back" class="button" onclick="location.href='index.html'">Back</button>
   <div class="imgcontainer">
     <img src="images/login.png" alt="Avatar" class="avatar">
   </div>
@@ -38,7 +24,7 @@
     <a href='account.html' style="text-decoration:none"><b>Login</b></a>
   </button>
   <label>
-    <input type="checkbox" checked="checked" name="remember"><b>Remember me</b>
+    <input id="remember" type="checkbox" checked="checked" name="remember"><b>Remember me</b>
   </label>
   </div>
 </div>

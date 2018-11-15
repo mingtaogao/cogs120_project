@@ -34,3 +34,13 @@ $('.cableTwist').on('click', function() {
   $(this).html('<iframe width="180" height="130" src="https://www.youtube.com/embed/zQJKfN7BU-c" frameborder="0" allowfullscreen="true"></iframe>')
   .addClass('active');
 });
+
+
+$(document).ready(function() {
+  if(localStorage.getItem("submitted")) {
+    document.getElementById("recommend").style.display = 'block';
+    $("#questionary").hide();
+    $("#recommend").show();
+  }
+});
+
