@@ -32,15 +32,14 @@ button {
     background-color: rgb(250,136,5,0.2);
     border-radius: 8px;
     color: white;
-    disabled
-		width:100%;
-		height: 25%;
+	width:100%;
+	height: 25%;
     text-align: center;
     text-decoration: none;
     font-size: 16px;
-		float:left;
-		border: none;
-		-webkit-transition-duration: 0.4s;
+	float:left;
+	border: none;
+	-webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
     cursor: pointer;
 }
