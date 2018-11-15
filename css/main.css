@@ -39,7 +39,6 @@ button {
 	font-size: 16px;
 	float:left;
 	border: none;
-	-webkit-transition-duration: 0.4s;
 	transition-duration: 0.4s;
 	cursor: pointer;
 }
