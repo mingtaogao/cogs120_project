@@ -4,6 +4,9 @@ body {
 
  #back {
    border: 1px #fcfcfc;
+   border-radius: 20%;
+   margin-top: 2%;
+   margin-left: 2%;
    color: #5D0C7D;
    background-color: #fcfcfc;
    font-size: 15px;
@@ -13,17 +16,20 @@ body {
 .myForm {
   font-size: 15px;
   color: #5D0C7D;
-  width: 100%;
+  width: 96%;
   background-image: linear-gradient(to right, yellow, red);
+  margin: 5% 2% 5% 2%;
 }
 
 .myForm fieldset {
   border-color: #fcfcfc;
 }
 
-.myForm legend,{
+.myForm legend {
   padding: 0;
   font-weight: bold;
+  font-size: 15px;
+  color: #5D0C7D;
 }
 
 .myForm input[type="text"] {

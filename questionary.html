@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="css/questionary.css" rel="stylesheet">
   </head>
 
@@ -12,17 +13,22 @@
   <button id="back" class="button" onclick="location.href='tutorials.html'">Back</button>
   <form class="myForm" action="tutorials.html">
         <p>
-        <label>Your Height:
-        <br>Feet: <input type="text" name="inch" required>
-        <br>Inches: <input type="text" name="feet" required>
-        </label>
-        </p>
+        <label>Your Height:</label>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        Feet: <input type="text" name="inch" required>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        Inches: <input type="text" name="feet" required>
+                    </div>
+                </div>
+            </div>
 
-        <br><p>
+        <br>
         <label>Your Weight (in pounds):
         <input type="text" name="weight" required>
         </label>
-        </p>
 
         <br><br><fieldset>
         <legend>Gender:</legend>
@@ -63,5 +69,6 @@
         localStorage.setItem("submitted", false);
     });
   </script>
+
 </body>
 </html>
