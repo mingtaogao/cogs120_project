@@ -8,3 +8,4 @@ $(document).ready(function() {
       window.location.replace("account.html");
     });
 });
+
