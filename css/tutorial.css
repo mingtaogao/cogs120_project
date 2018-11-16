@@ -119,6 +119,10 @@ h1 {
   text-decoration: underline;
 }
 
+.carousel-control.left {
+  margin-left: 0px;
+}
+
 .text-container {
     position: absolute;
 		font-size: 12px;
