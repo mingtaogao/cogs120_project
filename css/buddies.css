@@ -106,7 +106,7 @@ body {
 
 }
 
-b{
+b, select{
   color:#fcfcfc;
 }
 
@@ -141,10 +141,17 @@ b{
   visibility: visible;
 }
 
-.container p {
+.container .info1{
   color: #fcfcfc;
   font-size: 17px;
   word-spacing: 30px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.container .info2{
+	color: #fcfcfc;
+  font-size: 17px;
+  word-spacing: 5px;
   margin-top: 10px;
   margin-left: 10px;
 }
@@ -228,4 +235,3 @@ b{
 .form-container .btn:hover {
   opacity: 1;
 }
-

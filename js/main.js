@@ -1,13 +1,9 @@
  $(document).ready(function() {
-        if(localStorage.getItem('remember') == "true"){
+        localStorage.setItem('remember', "true");
           console.log("saved");
           $('#profile').text("My Account");
-        } else {
-          console.log("unsaved");
-          localStorage.clear();  
-        }
 });
-      
+
 $("#tuto").click(function(){
   if(localStorage.getItem('remember') == "true"){
     window.location = "tutorials.html";
@@ -39,4 +35,3 @@ $("#login").click(function(){
     window.location = "login.html";
   }
 });
-

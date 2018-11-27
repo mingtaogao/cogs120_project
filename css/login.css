@@ -46,6 +46,20 @@ input[type=text], input[type=password] {
     width: 100%;
 }
 
+#signup {
+  background-color: #F77614;
+  color: white;
+  padding: 14px 20px;
+  margin: 15px 0px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.signup {
+  text-decoration:underline;
+  margin-top: 10%;
+}
 button:hover {
     opacity: 0.5;
 }
@@ -57,11 +71,32 @@ button:hover {
 }
 
 .container {
-    padding: 25px;
+    padding-left: 10px;
+    padding-right:25px;
+    padding-top: 25px;
+    padding-bottom: 25px;
     margin-top: 20%;
 }
 
 span.psw {
     float: right;
     padding-top: 16px;
+}
+
+.logo {
+  	display: block;
+  	margin: 20% auto;
+}
+
+.logo p {
+	margin: 10 10 10 10px;
+	font-size: 30px;
+	font-weight: 500;
+	text-transform: uppercase;
+	color: #fcfcfc;
+}
+
+.wrapper a {
+		text-decoration:none;
+		text-align: center;
 }

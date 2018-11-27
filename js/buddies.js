@@ -1,17 +1,18 @@
 var x = document.getElementById("location");
 
 var postContent = [
-  {'profilePic': 'images/avatar1.jpg', 'name': 'Ming', 'startTime':'9:30', 'endTime':'10:30', 'index':1},
-  {'profilePic': 'images/avatar2.jpeg', 'name': 'James', 'startTime':'9:50', 'endTime':'11:00', 'index':2},
-  {'profilePic': 'images/avatar3.jpg', 'name': 'Lucia', 'startTime':'10:00', 'endTime':'11:45', 'index':3},
-  {'profilePic': 'images/avatar4.jpg', 'name': 'Sofia', 'startTime':'10:05', 'endTime':'11:30', 'index':4},
-  {'profilePic': 'images/avatar5.jpeg', 'name': 'Steven', 'startTime':'10:15', 'endTime':'12:00', 'index':5},
+  {'profilePic': 'images/avatar1.jpg', 'name': 'Ming', 'startTime':'9:30', 'endTime':'10:30', 'index':1, 'activity':'Running'},
+  {'profilePic': 'images/avatar2.jpeg', 'name': 'James', 'startTime':'9:50', 'endTime':'11:00', 'index':2, 'activity':'Weight lifting'},
+  {'profilePic': 'images/avatar3.jpg', 'name': 'Lucia', 'startTime':'10:00', 'endTime':'11:45', 'index':3, 'activity':'Basketball'},
+  {'profilePic': 'images/avatar4.jpg', 'name': 'Sofia', 'startTime':'10:05', 'endTime':'11:30', 'index':4, 'activity':'Stretching'},
+  {'profilePic': 'images/avatar5.jpeg', 'name': 'Steven', 'startTime':'10:15', 'endTime':'12:00', 'index':5, 'activity':'Yoga'},
 ]
 
 var allowPost = 1;
 
 $(document).ready(function() {
   console.log('hello world');
+  getLocation();
 
   // compile the template
   var source   = $("#entry-template").html();
@@ -24,16 +25,18 @@ $(document).ready(function() {
     var curHtml = template(curData);
     parentDiv.append(curHtml);
   }
-  
+
 
   $("#submit").click(function(){
     localStorage.setItem("name", document.getElementById('name').value);
     localStorage.setItem("startTime", document.getElementById('startTime').value);
     localStorage.setItem("endTime", document.getElementById('endTime').value);
+    localStorage.setItem("activity", document.getElementById('activity').value);
     var name = localStorage.getItem("name");
     var startTime = localStorage.getItem("startTime");
     var endTime = localStorage.getItem("endTime");
-    postContent.unshift({'profilePic': 'images/avatar6.png', 'name': name, 'startTime': startTime, 'endTime': endTime, 'index': postContent.length + 1});
+    var activity = localStorage.getItem("activity");
+    postContent.unshift({'profilePic': 'images/avatar6.png', 'name': name, 'startTime': startTime, 'endTime': endTime, 'index': postContent.length + 1, 'activity': activity});
     var html = template(postContent[0]);
     parentDiv.prepend(html);
     document.getElementById('chat').setAttribute('onclick', 'deletePost(postContent.length)');
@@ -74,6 +77,7 @@ $('#post').click(function() {
 
 function showPosition(position) {
     x.innerHTML = "You are at: UCSD RIMAC Gym.";
+    showPeople();
 }
 
 function makePost(){
@@ -103,4 +107,3 @@ function openNav() {
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
 }
-

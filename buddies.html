@@ -13,7 +13,7 @@
 <body>
   <div id="mySidenav" class="sidenav">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <a href="index.html" class="mainFunctions">Home</a>
+      <a href="home.html" class="mainFunctions">Home</a>
       <a href="tutorials.html" class="mainFunctions">Workout Tutorials</a>
         <a href="arms.html" class="workoutParts">Arms</a>
         <a href="chest.html" class="workoutParts">Chest</a>
@@ -26,7 +26,7 @@
     </div>
   <span class='openbtn' onclick="openNav()">&#8801;</span>
 
-	<button id="location" onclick="getLocation(); showPeople();">Get Your Current Location</button>
+	<button id="location" onclick="getLocation();">Get Your Current Location</button>
   <div class="container-fluid">
     <div class="row">
       <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
@@ -46,13 +46,28 @@
     <b>From: </b><input type="time" name="startTime" id="startTime" required>
     <b>To: </b><input type="time" name="endTime" id="endTime" required>
     <br><br>
+    <b>Current Activity:</b> <select id="activity">
+      <option>Basketball</option>
+      <option>Boxing</option>
+      <option>Cardio</option>
+      <option>Dancing</option>
+      <option>Running</option>
+      <option>Spinning</option>
+      <option>Stretching</option>
+      <option>Squash</option>
+      <option>Swimming</option>
+      <option>Table tennis</option>
+      <option>Weight lifting</option>
+      <option>Yoga</option>
+    </select>
     <button type="button" id="submit">Submit</button>
   </form>
 
   <script id="entry-template" type="text/x-handlebars-template">
       <div class="container container{{index}}">
     	  <img src="{{profilePic}}">
-    	  <p>{{name}}: {{startTime}} - {{endTime}}</p>
+    	  <p class="info1">{{name}}: {{startTime}} - {{endTime}}</p>
+        <p class="info2">Current Activity: {{activity}}</p>
     		<button id="chat" class="chatbutton" onclick="openForm({{index}})">Chat</button>
 
         <div class="chat-popup" id="myForm{{index}}">

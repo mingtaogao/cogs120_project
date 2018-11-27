@@ -28,7 +28,7 @@ body {
 		text-align: center;
 }
 
-button {
+.button {
 	background-color: rgb(250,136,5,0.2);
 	border-radius: 8px;
 	color: white;

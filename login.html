@@ -6,26 +6,30 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="css/tutorial.css" rel="stylesheet">
+        <!-- <link href="css/main.css" rel="stylesheet"> -->
         <link href="css/login.css" rel="stylesheet">
 
 </head>
 <body>
-  <button id="back" class="button" onclick="location.href='index.html'">Back</button>
-  <div class="imgcontainer">
-    <img src="images/login.png" alt="Avatar" class="avatar">
+
+  <div class="wrapper">
+      <a class="logo">
+          <img src="images/logo.png" alt="Logo" class="center">
+          <p>Get In. Get Fit. <br /> Get on with Life!</p>
+      </a>
   </div>
-  
+
   <div class="container">
   <label for="text"><b>Username</b></label>
   <input id="uname" type="text" placeholder="Enter Username" name="text" required>
   <label for="psw"><b>Password</b></label>
   <input type="password" placeholder="Enter Password" name="psw" required>
   <button type="submit" id="login" >
-    <a href='account.html' style="text-decoration:none"><b>Login</b></a>
+    <a href='home.html' style="text-decoration:none"><b>Login</b></a>
   </button>
-  <label>
+  <!-- <label>
     <input id="remember" type="checkbox" checked="checked" name="remember"><b>Remember me</b>
-  </label>
+  </label> -->
   </div>
 </div>
   <script src="https://code.jquery.com/jquery.js"></script>
