@@ -10,8 +10,8 @@
   </head>
 
 <body>
-  <button id="back" class="button" onclick="location.href='tutorials.html';">Back</button>
-  <form class="myForm" action="tutorials.html">
+  <button id="back" class="button" onclick="goBack();">Back</button>
+  <form class="myForm" action="account2.html">
         <p>
         <label>Your Height:</label>
             <div class="container">
@@ -68,6 +68,15 @@
     $('#submit').on('click', function() {
         localStorage.setItem("submitted", false);
     });
+
+    function goBack(){
+      if (localStorage.getItem("account") == "true") {
+        window.location = 'account2.html';
+      }
+      if (localStorage.getItem("tutorial") == "true"){
+        window.location = 'tutorials2.html';
+      }
+    }
   </script>
 
 </body>

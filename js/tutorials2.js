@@ -37,6 +37,8 @@ $('.cableTwist').on('click', function() {
 
 
 $(document).ready(function() {
+  localStorage.setItem("account", false);
+  localStorage.setItem("tutorial", true);
   if(localStorage.getItem("submitted")) {
     document.getElementById("recommend").style.display = 'block';
     $("#questionary").hide();

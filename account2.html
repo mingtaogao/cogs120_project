@@ -1,0 +1,76 @@
+<idoctype html>
+
+<html>
+<head>
+        <title>Personal Account</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link href="css/account2.css" rel="stylesheet">
+
+</head>
+<body>
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="home.html" class="mainFunctions">Home</a>
+    <a href="tutorials.html" class="mainFunctions">Workout Tutorials</a>
+      <a href="arms.html" class="workoutParts">Arms</a>
+      <a href="chest.html" class="workoutParts">Chest</a>
+      <a href="back.html" class="workoutParts">Back</a>
+      <a href="core.html" class="workoutParts">Core</a>
+      <a href="legs.html" class="workoutParts">Legs</a>
+    <a href="buddies.html" class="mainFunctions">Workout Buddies</a>
+    <a href="motivation.html" class="mainFunctions">Motivations</a>
+    <a href="account.html" class="mainFunctions">My Account</a>
+  </div>
+  <span class='openbtn' onclick="openNav()">&#8801;</span>
+  <button id="logout" class="btn">Log Out</button>
+
+  <div class="imgcontainer">
+    <img src="images/avatar6.png" alt="Avatar" class="avatar">
+    <h1 id="welcome">Welcome Back</h1>
+  </div>
+  <div id="questionary">
+    <button id="btn" onclick="location.href='questionary2.html';">Get your personalized workout today!</button>
+  </div>
+
+  <div id="recommend" class ="container">
+    <div class="row">
+      <h1 class = "col-xs-8 col-sm-8 col-md-8 col-lg-8 " style="margin-bottom: 0px;">Recommend For You</h1>
+      <button class="col-xs-4 col-sm-4 col-md-4 col-lg-4" id="submit" onclick="location.href='questionary2.html';">Submit Again</button>
+    </div>
+    <div class="row" style="margin-top:15px;">
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 calfExt">
+        <img src='images/calfExt.jpg'>
+       <div class="text-container"><p>Calf Extension Machine</p></div>
+      </div>
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 hammerStrength">
+        <img src='images/hammerStrength.jpg'>
+        <div class="text-container"><p>Hammer Strength Row Machine</p></div>
+      </div>
+      </div>
+   <div class="row">
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 cableTwist">
+          <img src='images/cableTwist.png'>
+          <div class="text-container"><p>Cable Down-Up Twist</p></div>
+      </div>
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 backExt">
+        <img src='images/backExt.png'>
+        <div class="text-container"><p>Back Extension Machine</p></div>
+      </div>
+  </div>
+    <div class="row">
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 tricepPress">
+          <img src='images/tricepPress.jpg'>
+          <div class="text-container"><p>Tricep Press Machine</p></div>
+      </div>
+    </div>
+</div>
+
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/account2.js"></script>
+  <script src="js/tutorials.js"></script>
+</body>
+</html>
