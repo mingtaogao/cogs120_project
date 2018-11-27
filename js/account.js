@@ -5,7 +5,7 @@ $(document).ready(function() {
 
     $("#logout").click(function(){
     	localStorage.clear();
-    	window.location = 'login.html';
+    	window.location = 'index.html';
     })
 });
 
