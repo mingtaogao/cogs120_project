@@ -25,19 +25,10 @@ h1 {
 }
 
 #btn {
-    position: absolute;
-    top: 47%;
-    left: 49%;
-    width: 85%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(250, 136, 5, 0.5);
-    color: white;
-    font-size: 16px;
-    padding: 12px 24px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    text-align: left;
+		width: 30%;
+		font-size: 16px;
+		background-color: rgba(250, 136, 5, 0.5);
+		padding: 3px;
 }
 
 
