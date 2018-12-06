@@ -6,7 +6,7 @@
 
 $("#tuto").click(function(){
   if(localStorage.getItem('remember') == "true"){
-    window.location = "tutorials2.html";
+    window.location = "tutorials.html";
   } else {
     window.alert("Please Log In First!");
   }
@@ -30,7 +30,7 @@ $("#moti").click(function(){
 
 $("#login").click(function(){
   if(localStorage.getItem('remember') == "true"){
-    window.location = "account2.html";
+    window.location = "account.html";
   } else {
     window.location = "login.html";
   }
